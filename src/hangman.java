@@ -7,7 +7,7 @@ public class hangman {
     private JButton suchenBtn;
     private JLabel wortLabel;
     private JButton neustartBtn;
-
+    private JPanel labelPanel;
 
 
     public static void main(String[] args) {
@@ -16,7 +16,9 @@ public class hangman {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-        frame.setSize(500, 300);
-        frame.setForeground(new Color(238, 130, 238));
+        frame.setSize(600, 500);
     }
+
+
+
 }
