@@ -43,15 +43,11 @@ public class hangman {
 
                 wortG = wort;
 
-                System.out.println(wort);
-
                 //using stringbuffer to generate a new string based on the character count of wort
 
                 for (int i = 0; i < wort.length(); i++) {
                     stringBuffer.insert(i, "-");
                 }
-
-                System.out.println(stringBuffer);
 
                 wortLabel.setText("");
                 wortLabel.setText(stringBuffer.toString());
@@ -67,8 +63,6 @@ public class hangman {
 
                 char buchstabe = eingabeTextField.getText().charAt(0);
 
-                System.out.println(wortG);
-
                 for (int i = 0; i < wortG.length(); i++) {
 
                     //Check if found buchstabe is already buchstabe
@@ -82,7 +76,6 @@ public class hangman {
 
                         } else {
                             savedWort.replace(i,i+1, Character.toString(buchstabe));
-
 
                         }
 
@@ -110,7 +103,7 @@ public class hangman {
 
                     //Add wrong character to list above
                     incorrectBuchstaben.add(eingabeTextField.getText().charAt(0));
-                    System.out.println(incorrectBuchstaben.get(0));
+
 
                     StringBuffer incorrectString = new StringBuffer();
 
@@ -132,7 +125,7 @@ public class hangman {
                 eingabeTextField.setText("");
 
                 if(wortLabel.getText().equals(wortG)){
-                    System.out.println(wortG + " 1 ");
+
                     endMessageLabel.setText("YOU WON!");
                     suchenBtn.setEnabled(false);
                 }
@@ -146,12 +139,27 @@ public class hangman {
 
     //add words and choose one with random func.
     public String getWort(){
-        woerter.add("gay");
+        woerter.add("Dorf");
+        woerter.add("Hoffnung");
         woerter.add("leicht");
-        woerter.add("toll");
+        woerter.add("optimieren");
+        woerter.add("Absurdität");
+        woerter.add("Philosophie");
+        woerter.add("Symmetrie");
+        woerter.add("Verklärung");
+        woerter.add("Akklimatisierung");
+        woerter.add("abstrahieren");
+        woerter.add("verifizieren");
+        woerter.add("transzendieren");
+        woerter.add("navigieren");
+        woerter.add("konfrontieren");
+        woerter.add("beschleunigen");
+        woerter.add("stabilisieren");
+        woerter.add("imitieren");
+        woerter.add("harmonieren");
         woerter.add("Supercalifragilisticexpialigetisch");
 
-        return woerter.get(rand.nextInt(4));
+        return woerter.get(rand.nextInt(19));
 
     }
 
